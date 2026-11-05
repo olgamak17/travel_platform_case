@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Travel Platform — an interactive travel video platform for Channel One. A project case study by Olga Makarkina.">
+<title>Travel Platform — Olga Makarkina</title>
+<style>
+:root{--ink:#20212b;--muted:#747786;--blue:#2588ed;--line:#e7e8ed;--paper:#fff;--soft:#f5f6f8;--max:1160px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit}
+.wrap{width:min(var(--max),calc(100% - 48px));margin:auto}
+header{padding:26px 0;border-bottom:1px solid var(--line)}
+.nav{display:flex;justify-content:space-between;align-items:center;gap:20px;font-size:14px}
+.brand{font-weight:750;letter-spacing:.02em;text-decoration:none}
+.nav a:last-child{color:var(--muted);text-decoration:none}
+.hero{padding:76px 0 54px}
+.kicker,.eyebrow{font-size:12px;font-weight:750;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(42px,7vw,76px);line-height:1.02;letter-spacing:-.055em;margin:16px 0 18px;max-width:850px}
+.subtitle{font-size:clamp(19px,2.3vw,25px);line-height:1.35;color:#555968;max-width:760px;margin:0 0 26px}
+.live{display:inline-flex;align-items:center;gap:9px;color:var(--blue);font-weight:700;text-decoration:none;border-bottom:1px solid #a9d3ff;padding-bottom:3px}
+.live:hover{border-color:var(--blue)}
+.meta{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;border-top:1px solid var(--line);padding-top:24px;margin-top:42px}
+.meta b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.meta span{font-size:15px;font-weight:600}
+.hero-shot{margin-top:44px;border-radius:18px;overflow:hidden;background:var(--soft)}
+.hero-shot img{display:block;width:100%;height:auto}
+section{padding:76px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(28px,4vw,42px);line-height:1.12;letter-spacing:-.04em;margin:0 0 26px}
+h3{font-size:21px;line-height:1.25;margin:0 0 12px}
+p{margin:0 0 16px;color:#4d5060}
+.highlight-text{color:#2588ed;font-weight:650}
+.lead{font-size:19px;line-height:1.6;max-width:850px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.role-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 56px;margin-top:30px}
+.role-grid ul{margin:0;padding-left:19px;color:#4d5060}
+.role-grid li{padding:3px 0}
+.path{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px}
+.path-card{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#fff}
+.path-card .copy{padding:24px}
+.path-card .step{font-size:12px;letter-spacing:.1em;text-transform:uppercase;font-weight:750;color:var(--blue);margin-bottom:9px}
+.path-card img{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:var(--soft)}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+.gallery figure{margin:0;border-radius:14px;overflow:hidden;background:var(--soft);border:1px solid var(--line)}
+.gallery img{width:100%;height:auto;display:block}
+figcaption{padding:12px 15px;font-size:13px;color:var(--muted)}
+.data-box{background:var(--soft);border-radius:16px;padding:28px;margin-top:28px}
+.fields{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:18px}
+.field{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px}
+.field code{display:block;font-size:16px;font-weight:750;color:var(--blue);margin-bottom:6px}
+.field p{font-size:14px;margin:0}
+.approach{background:var(--soft);border-radius:16px;padding:30px}
+.result{background:var(--ink);color:#fff;border-radius:18px;padding:38px}
+.result p{color:#d9dbe3}
+.result strong{color:#fff}
+.bullets{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 30px;margin-top:25px}
+.bullets div{padding:14px 0;border-top:1px solid var(--line);font-weight:600}
+footer{padding:48px 0 56px;border-top:1px solid var(--line)}
+.foot{display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap}
+.email{font-size:20px;font-weight:700;text-decoration:none}
+.note{font-size:13px;color:var(--muted);max-width:700px;margin-top:24px}
+@media(max-width:760px){
+ .wrap{width:min(100% - 32px,var(--max))}
+ .hero{padding:54px 0 38px}
+ .meta,.two-col,.role-grid,.path,.gallery,.fields,.bullets{grid-template-columns:1fr}
+ .meta{gap:16px}
+ section{padding:54px 0}
+ .role-grid{gap:24px}
+ .path{gap:18px}
+ .result{padding:26px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">OLGA MAKARKINA</a>
+    <a href="mailto:olgamak17@gmail.com">Get in touch ↗</a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div class="kicker">Project case study · 2022</div>
+    <h1>Travel Platform</h1>
+    <p class="subtitle">An interactive travel video platform bringing together stories and destinations from across Russia.</p>
+    <a class="live" href="https://travel.1tv.ru/" target="_blank" rel="noopener">Explore the live website <span aria-hidden="true">↗</span></a>
+    <div class="meta">
+      <div><b>My role</b><span>Project Manager</span></div>
+      <div><b>Company</b><span>Channel One</span></div>
+      <div><b>Project scope</b><span>Concept, requirements, coordination, content, testing</span></div>
+    </div>
+    <div class="hero-shot"><img src="assets/01-homepage.png" alt="Travel Platform homepage with regional cards and entry points to regional search and the interactive map"></div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">01 / The case</div>
+      <h2>One place to explore travel stories</h2>
+      <p class="lead">Channel One is a major national media broadcaster with a digital video platform and subscription-based streaming service, comparable to RaiPlay in Italy.</p>
+      <p>The company had several TV shows dedicated to travelling across Russia, with a growing library of more than 1,000 videos. Based on user feedback and editorial needs, our team decided to create a dedicated platform where users could discover travel content from different programmes in one place.</p>
+      <p class="highlight-text">The goal was to make the video library easier to explore and provide different ways to find information about cities, regions and places across Russia.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">02 / The solution</div>
+      <h2>Two ways to discover the content</h2>
+      <p class="lead">I proposed two main ways for users to explore the video library: browse by region or navigate through an interactive map.</p>
+      <div class="path">
+        <article class="path-card">
+          <img src="assets/02-region-search.png" alt="Alphabetical list of Russian regions">
+          <div class="copy">
+            <div class="step">Journey 01</div>
+            <h3>Search by region</h3>
+            <p>Users could browse an alphabetical list of Russian regions, search for a location and open its dedicated page. Each page brought together videos from different travel shows related to that location.</p>
+          </div>
+        </article>
+        <article class="path-card">
+          <img src="assets/04-map.png" alt="Interactive map with geographical video markers">
+          <div class="copy">
+            <div class="step">Journey 02</div>
+            <h3>Explore the interactive map</h3>
+            <p>Users could select a geographical point on the map to open a related travel video. The video page also included more content from the same region, inviting users to continue exploring.</p>
+          </div>
+        </article>
+      </div>
+      <div class="gallery">
+        <figure><img src="assets/03-region-page.png" alt="Moscow regional page with a video collection"><figcaption>A regional page: description and videos from different programmes.</figcaption></figure>
+        <figure><img src="assets/05-video-page.png" alt="Video page with related videos from the same region"><figcaption>A video page: a selected story followed by more videos from the region.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">03 / My role</div>
+      <h2>Coordinating the project from concept to launch</h2>
+      <p class="lead">I coordinated the project from the initial concept through design, development and launch, connecting the work of editorial, design and development teams.</p>
+      <div class="role-grid">
+        <div><h3>Concept and requirements</h3><ul><li>Proposed regional search and the interactive map.</li><li>Researched possible tools and solutions for interactive maps.</li><li>Defined user scenarios and functional requirements.</li><li>Prepared the initial brief for the design team.</li></ul></div>
+        <div><h3>Design and development coordination</h3><ul><li>Coordinated designers and developers.</li><li>Reviewed Figma layouts and provided feedback.</li><li>Communicated requirements and coordinated revisions during implementation.</li></ul></div>
+        <div><h3>Content and editorial coordination</h3><ul><li>Prepared a content mapping spreadsheet with cities, programmes, descriptions and video links.</li><li>Coordinated the preparation of more than 1,000 videos.</li><li>Worked with editors to ensure consistent geographical tagging.</li></ul></div>
+        <div><h3>Testing and quality control</h3><ul><li>Personally tested the completed pages and functionality.</li><li>Prepared lists of issues and feedback for developers.</li><li>Checked corrections and coordinated further improvements.</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">04 / Technical implementation</div>
+      <h2>Connecting video content to places</h2>
+      <div class="two-col">
+        <div>
+          <p>The videos were already stored in the company's content management system, with standard metadata such as ID, title and description.</p>
+          <p>To support the new platform, developers introduced two additional geographical fields. These connected the video library to regional collections and map locations.</p>
+          <p>One challenge was inconsistent geographical information: some entries contained country names, others cities, regions or individual landmarks. I coordinated the work with the editorial team to review and standardise the geographical tags so that the regional pages and map displayed the correct content.</p>
+        </div>
+        <div class="data-box">
+          <div class="eyebrow">CMS metadata</div>
+          <div class="fields">
+            <div class="field"><code>PLACES</code><p>Identified the region associated with a video and supported regional video collections.</p></div>
+            <div class="field"><code>GEO_TAG</code><p>Stored geographical coordinates connecting a video to a point on the interactive map.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="gallery">
+        <figure><img src="assets/06-cms-metadata.png" alt="CMS spreadsheet showing video IDs, titles, Places and Geo_Tag fields"><figcaption>Example of the content metadata used to connect videos with regions and map coordinates.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">05 / Project management</div>
+      <h2>Waterfall with iterative feedback cycles</h2>
+      <div class="approach">
+        <p>The project followed a mainly sequential workflow, similar to the Waterfall approach. We moved through clearly defined stages: concept and requirements, content preparation, design, development, testing and launch. Each stage provided the basis for the next one.</p>
+        <p>However, content preparation and testing required a more iterative approach.</p>
+        <div class="two-col">
+          <div><h3>Content preparation</h3><p>We worked closely with the editorial team, reviewed geographical tags, identified inconsistencies and corrected the data through several rounds of feedback.</p></div>
+          <div><h3>Testing and launch</h3><p>I tested the functionality, collected feedback, shared issues with developers and coordinated repeated rounds of corrections.</p></div>
+        </div>
+        <p>This allowed us to keep the overall project structured while making improvements whenever practical testing and feedback revealed a need for changes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">06 / The result</div>
+      <div class="result">
+        <h2>More than 1,000 travel videos, brought together in one place.</h2>
+        <p>Users could explore the content through regional search, dedicated regional pages and an interactive map. The project transformed a fragmented video collection into a structured digital experience for discovering travel destinations, landmarks and routes across Russia.</p>
+        <p><strong>The platform remains active and continues to expand its video library.</strong></p>
+        <a class="live" href="https://travel.1tv.ru/" target="_blank" rel="noopener" style="color:#8ec7ff;border-color:#45617d">Visit travel.1tv.ru ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow">07 / What this project demonstrates</div>
+      <h2>What I brought to the project</h2>
+      <div class="bullets">
+        <div>Turning user feedback into a digital product concept</div>
+        <div>Translating ideas into functional requirements and user scenarios</div>
+        <div>Coordinating editorial, design and development teams</div>
+        <div>Working with structured data and content management</div>
+        <div>Managing sequential project stages with iterative feedback cycles</div>
+        <div>Testing functionality and managing quality through launch</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div><div class="eyebrow">Olga Makarkina · Project Manager · Bologna, Italy</div><h2 style="margin:10px 0 0">Let’s talk about projects.</h2></div>
+      <a class="email" href="mailto:olgamak17@gmail.com">olgamak17@gmail.com ↗</a>
+    </div>
+    <p class="note">How I built this page: I used ChatGPT as a build assistant. The facts, texts, decisions, numbers and screenshots are mine, from documents I wrote during the project. AI helped structure and code the page.</p>
+  </div>
+</footer>
+</body>
+</html>
